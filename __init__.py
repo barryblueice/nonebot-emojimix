@@ -17,8 +17,8 @@ emojimix = on_regex(rf"^(?P<left>{pattern})\s*\+\s*(?P<right>{pattern})$", block
 
 @emojimix.handle()
 async def _(event: MessageEvent,bot: Bot,msg: dict = RegexDict()):
-    a = msg["code1"]
-    b = msg["code2"]
+    a = msg["left"]
+    b = msg["right"]
 
     result = mix(a,b)
     
