@@ -99,10 +99,11 @@ def mix_reverse(a,b):
             if f'u{a}_u{b}.png' in (os.listdir(local_path)) or f'u{b}_u{a}.png' in (os.listdir(local_path)):
                 return os.path.join(local_path,f'u{a}_u{b}.png')
             else:
-                if len(data[a]) == 1:
-                    if b == data[a][0]['rightEmojiCodepoint']:
+                
+                for i in range(0,len(data[a])):
+                    if b == data[a][i]['rightEmojiCodepoint']:
 
-                        url = data[a][0]['gStaticUrl']
+                        url = data[a][i]['gStaticUrl']
 
                         logger.info(url)
 
@@ -113,9 +114,9 @@ def mix_reverse(a,b):
                                 file.write(result.content)
                             return url
                         
-                    elif a == data[b][0]['rightEmojiCodepoint']:
+                    elif a == data[b][i]['rightEmojiCodepoint']:
 
-                        url = data[b][0]['gStaticUrl']
+                        url = data[b][i]['gStaticUrl']
 
                         logger.info(url)
 
@@ -125,36 +126,6 @@ def mix_reverse(a,b):
                             with open(os.path.join(local_path,f'u{b}_u{a}.png'), "wb") as file:
                                 file.write(result.content)
                             return url
-                    else:
-                        return None
-                    
-                else:
-                    for i in range(0,len(data[a])):
-                        if b == data[a][i]['rightEmojiCodepoint']:
-
-                            url = data[a][i]['gStaticUrl']
-
-                            logger.info(url)
-
-                            result = requests.get(url=url)
-                            
-                            if result.status_code == 200:
-                                with open(os.path.join(local_path,f'u{a}_u{b}.png'), "wb") as file:
-                                    file.write(result.content)
-                                return url
-                            
-                        elif a == data[b][i]['rightEmojiCodepoint']:
-
-                            url = data[b][i]['gStaticUrl']
-
-                            logger.info(url)
-
-                            result = requests.get(url=url)
-                            
-                            if result.status_code == 200:
-                                with open(os.path.join(local_path,f'u{b}_u{a}.png'), "wb") as file:
-                                    file.write(result.content)
-                                return url
                     
                     return None
 
