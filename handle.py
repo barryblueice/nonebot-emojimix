@@ -97,8 +97,10 @@ def mix(a,b):
             # jsonpath_expression = parse(f"$.data.{b}")
             # result = [match.value for match in jsonpath_expression.find(data)]
             # print (result)
-            if f'u{a}_u{b}.png' in (os.listdir(local_path)) or f'u{b}_u{a}.png' in (os.listdir(local_path)):
+            if f'u{a}_u{b}.png' in (os.listdir(local_path)):
                 return os.path.join(local_path,f'u{a}_u{b}.png')
+            elif f'u{b}_u{a}.png' in (os.listdir(local_path)):
+                return os.path.join(local_path,f'u{b}_u{a}.png')
             else:
                 
                 for i in range(0,len(data[a])):
