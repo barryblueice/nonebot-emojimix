@@ -10,7 +10,7 @@
 emoji+emoji
 示例：😎+😁
 ```
-![image](https://github.com/barryblueice/nonebot-emojimix/assets/44601454/5e47d78c-e555-48f1-8fb7-9f70d8984e49)
+![image](https://github.com/user-attachments/assets/51dbd587-3322-41b7-9942-9c79065c1b22)
 
 ## 使用前提醒：
 本插件包括以下能治疗各位开发者血压低的内容：
