@@ -91,4 +91,6 @@ https://www.gstatic.com/android/keyboard/emojikitchen/{日期}/{表情b}/{表情
 
 ![image](https://github.com/barryblueice/nonebot-emojimix/assets/44601454/d7716f29-5b80-446b-beb3-88f286569638)
 
+原metadata.json下载地址：[https://raw.githubusercontent.com/xsalazar/emoji-kitchen-backend/main/app/metadata.json](https://raw.githubusercontent.com/xsalazar/emoji-kitchen-backend/main/app/metadata.json)
+
 接着做一个对比，然后根据url规则实现就可以。
