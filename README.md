@@ -10,7 +10,7 @@
 emoji+emoji
 示例：😎+😁
 ```
-![image](https://github.com/barryblueice/nonebot-emojimix/assets/44601454/5e47d78c-e555-48f1-8fb7-9f70d8984e49)
+![image](https://github.com/user-attachments/assets/51dbd587-3322-41b7-9942-9c79065c1b22)
 
 ## 使用前提醒：
 本插件包括以下能治疗各位开发者血压低的内容：
@@ -92,3 +92,5 @@ https://www.gstatic.com/android/keyboard/emojikitchen/{日期}/{表情b}/{表情
 ![image](https://github.com/barryblueice/nonebot-emojimix/assets/44601454/d7716f29-5b80-446b-beb3-88f286569638)
 
 接着做一个对比，然后根据url规则实现就可以。
+
+原metadata.json下载地址：[https://raw.githubusercontent.com/xsalazar/emoji-kitchen-backend/main/app/metadata.json](https://raw.githubusercontent.com/xsalazar/emoji-kitchen-backend/main/app/metadata.json)
