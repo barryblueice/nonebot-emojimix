@@ -1,6 +1,7 @@
 from nonebot import on_message
 from nonebot.adapters.onebot.v11 import MessageEvent, MessageSegment, Bot
 import emoji
+from nonebot.log import logger
 
 from .handle import mix
 
@@ -19,9 +20,13 @@ async def _(event: MessageEvent,bot: Bot):
     text = event.get_plaintext()
     emojis = emoji.emoji_list(text)
 
-    if len(emojis) >= 2:
+    if len(emojis) == 2:
+
         a = emojis[0]['emoji']
         b = emojis[1]['emoji']
+
+        logger.info(a)
+        logger.info(b)
 
         result = mix(a,b)
         

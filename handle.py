@@ -84,13 +84,16 @@ emoji_list = emoji_list
 #     except:
 #         result = mix_reverse(a=b,b=a)
 #         return result
-    
+
+def emoji_to_codepoint_str(e: str) -> str:
+        return '_'.join(format(ord(c), 'x') for c in e)
+
 def mix(a,b):
     # try:
         if not os.path.exists(local_path):
             os.makedirs(local_path)
-        a = str(hex(ord(a))).lstrip('0x')
-        b = str(hex(ord(b))).lstrip('0x')
+        a = emoji_to_codepoint_str(a).replace("_","-")
+        b = emoji_to_codepoint_str(b).replace("_","-")
         logger.info(a)
         logger.info(b)
         if a in emoji_list and b in emoji_list:
